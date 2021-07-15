@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A starter AWS Lambda function.
+Resources:
+  serverlessrepohelloworldpythohelloworldpython3LBYEhp2BKKol:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.6
+      CodeUri: .
+      Description: A starter AWS Lambda function.
+      MemorySize: 128
+      Timeout: 3
+      Role: >-
+        arn:aws:iam::822457145252:role/serverlessrepo-hello-world-p-helloworldpython3Role-USBFIZNI8S5I
+      Tags:
+        'serverlessrepo:semanticVersion': 1.0.3
+        'lambda:createdBy': SAM
+        'serverlessrepo:applicationId': >-
+          arn:aws:serverlessrepo:us-east-1:077246666028:applications/hello-world-python3
