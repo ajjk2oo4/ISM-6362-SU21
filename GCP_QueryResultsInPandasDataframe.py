@@ -5,7 +5,7 @@
 sql = """
 WITH all_visitor_stats AS (
 SELECT
-  fullvisitorid, # 741,721 unique visitors
+  fullvisitorid, 
   IF(COUNTIF(totals.transactions > 0 AND totals.newVisits IS NULL) > 0, 1, 0) AS will_buy_on_return_visit
   FROM `data-to-insights.ecommerce.web_analytics`
   GROUP BY fullvisitorid
