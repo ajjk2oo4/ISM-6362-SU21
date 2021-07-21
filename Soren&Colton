@@ -1,0 +1,22 @@
+### Begin by finding the New York City Property Sales 2014-2018 dataset provided by Enigma at the following link -- https://aws.amazon.com/marketplace/pp/prodview-27ompcouk2o6i?qid=1624662018304&sr=0-441&ref_=srh_res_product_title#offers
+## Now we can begin creating our bucket and ingesting our data
+# In the AWS Console, click into the S3 tab and then choose “Create Bucket”.
+#	Create a bucket named newyorkbucket (then the epoch time) and keep the rest of the default settings. It is important to choose what AWS region you will be using and then apply that for the rest of the process. 
+#	When the bucket is created, you can either create a folder within that bucket or skip this step.
+#	Now, go back to the dataset provided in the earlier step and begin downloading each file into your bucket or folder within your bucket if you decided to follow that step. 
+#	You will need to download 2014, 2015, 2016, 2017, and 2018 separately. Be sure to upload each to the same bucket or file to make future steps easier. 
+
+### Once the data was ingested and stored in S3, we used AWS Glue to complete the following steps:
+##	Created a data table called new_york_housing_sales with the database new york housing db
+##	Created a crawler called New York Rat Crawler to add the data to the table
+##	Using AWS Glue Studio, created a job called Fill and Drop that performs a data transformation and return the output back to S3
+##	The job uses the system’s interface to apply the below eight functions:
+#	Data Catalog Table – Bring in the data table
+#	FillMissingValues – Impute residential units
+#	FillMissingValues – Impute commercial units
+#	FillMissingValues – Impute total units
+#	FillMissingValues – Impute land square feet
+#	FillMissingValues – Impute gross square feet
+#	ApplyMapping – Drop ease-ment and apartment number
+#	S3 bucket – Return the output to S3
+
