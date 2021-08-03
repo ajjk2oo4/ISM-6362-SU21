@@ -6,17 +6,80 @@
 #	Now, go back to the dataset provided in the earlier step and begin downloading each file into your bucket or folder within your bucket if you decided to follow that step. 
 #	You will need to download 2014, 2015, 2016, 2017, and 2018 separately. Be sure to upload each to the same bucket or file to make future steps easier. 
 
-### Once the data was ingested and stored in S3, we used AWS Glue to complete the following steps:
-##	Created a data table called new_york_housing_sales with the database new york housing db
-##	Created a crawler called New York Rat Crawler to add the data to the table
-##	Using AWS Glue Studio, created a job called Fill and Drop that performs a data transformation and return the output back to S3
-##	The job uses the system’s interface to apply the below eight functions:
-#	Data Catalog Table – Bring in the data table
-#	FillMissingValues – Impute residential units
-#	FillMissingValues – Impute commercial units
-#	FillMissingValues – Impute total units
-#	FillMissingValues – Impute land square feet
-#	FillMissingValues – Impute gross square feet
-#	ApplyMapping – Drop ease-ment and apartment number
-#	S3 bucket – Return the output to S3
+### Once the data is ingested and stored in S3, use AWS Glue DataBrew to complete the following steps: 
+##Create a project that performs the necessary data transformations (below) in the recipe interface and return the output back to S3 
+#Fill Missing Values (most frequent): 
+#Residential Units 
+#Commercial Units 
+#Land Square Feet 
+#Gross Square Feet 
+#Year Built 
+#Tax Class At Time of Sale 
+#Sale Price 
+#Sale Year 
+#Year Built 
+#Delete Column 
+#Total Units 
+#Zip Code 
+#Borough 
+#Sale Date 
+#**External to this process we also converted Burough Name into dummy variables** 
+##	S3 bucket – Return the output to S3
 
+### Machine Learning 
+##Using SageMaker, connect your data and use Autopilot to run a machine learning model. 
+#Select the output database from DataBrew as the data source 
+#Select the model type Regression 
+#Set the success metric to MSE 
+#Output the model results back to S3 
+#Set a time limitation to avoid high costs (recommend 3600 seconds) 
+##Run the model and wait for a successful deployment 
+
+###Stream Processing 
+##For the stream processing, Kinesis and Firehose will be used to establish the stream: 
+#Create a data stream 
+#Choose a destination 
+#Name the delivery stream 
+#Output to the S3 bucket 
+#Create a configuration set 
+#Add an event destination 
+
+####Data Warehousing 
+###Once the data has been cleaned and/or the model has been run send the data back into S3. You can then use Redshift to connect it to Tableau. The following steps need to be completed for this section: 
+##Begin by creating a cluster within Redshift 
+#You can leave the default cluster name if you wish  
+#Then choose the free trial plan  
+#For the node type, we choose the ra3.4xlarge 
+#For the database, set the admin user name to “awsuser” and then create a password 
+##For the next section, we need to create an IAM role for Redshift 
+#Go the IAM role in the AWS services and create a Redshift role and choose “read only” 
+#We named this role “Redshifts3ReadOnly” 
+##We now need to go into the editor section of Redshift 
+#The “from” part of the code is showing where the data is located and the iam_role is the Redshift role we just created.
+#For this section, we will using the following query: 
+DROP TABLE IF EXISTS property_sales; 
+
+CREATE TABLE property_sales 
+( 
+    ind_staten_island SMALLINT, ind_queens SMALLINT, BROOKLYN SMALLINT,	BRONX SMALLINT,	MANHATTAN SMALLINT,	RESIDENTIAL_UNITS SMALLINT, COMMERCIAL_UNITS SMALLINT,	LAND_SQUARE_FEET INT,	GROSS_SQUARE_FEET INT,	YEAR_BUILT SMALLINT,	TAX_CLASS SMALLINT,	SALE_PRICE INT,	SALE_YEAR SMALLINT 
+); 
+COMMIT; 
+
+copy PROPERTY_SALES 
+from ‘s3://newyorkbucket1625949005/NewYorkNewSundayEditTEST.csv’  
+
+iam_role ‘arn:aws:iam::870916385273:role/Redshifts3ReadOnly’    
+
+CSV 
+IGNOREHEADER 1; 
+COMMIT; 
+
+###Once we run this query, we can open Tableau for the final part.  
+##Choose Amazon Redshift under the To A Server section 
+##For the server input: ﻿redshift-cluster-1.csbzxdxgh6id.us-west-2.redshift.amazonaws.com 
+#You may need to change “us-west-2” if you are not in the Oregon region 
+##Keep Port 5439 
+##The database is “dev” 
+##The username is “awsuser” 
+##And the password is the one you set for the cluster 
+##Then choose sign in and you will connect to Tableau to the Redshift cluster 
