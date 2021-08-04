@@ -1,3 +1,4 @@
+#https://cloud.google.com/docs
 SELECT
   * EXCEPT(fullVisitorId)
 FROM
