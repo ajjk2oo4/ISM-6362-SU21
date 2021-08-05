@@ -1,0 +1,15 @@
+[
+  {
+    "Action": {
+      "Operation": "JOIN",
+      "Parameters": {
+        "joinKeys": "[{\"key\":\"TCIN\",\"value\":\"TCIN_o\"}]",
+        "joinType": "RIGHT_JOIN",
+        "leftColumns": "[\"TCIN\",\"PRODUCT_TITLE\",\"PRODUCT_DESCRIPTION\",\"BRAND_NAME\",\"BRAND_MANUFACTURER\",\"PRODUCT_CATEGORY_CLASSIFICATION_NAME\",\"ITEM_TYPE_NAME\",\"PRODUCT_TYPE_NAME\",\"MAX_ORDER_QTY\",\"RATING_AVERAGE_OVERALL\"]",
+        "rightColumns": "[\"DATE_o\",\"TCIN_o\",\"UNITS_SOLD_o\",\"UNITS_RESTOCKED_o\",\"AVAILIBLE_QUANTITY_o\",\"CURRENT_PRICE_o\"]",
+        "secondInputLocation": "s3://augbrewbucket/onlinetop20_29Jul2021_1627527439295/",
+        "secondaryDatasetName": "onlineclean"
+      }
+    }
+  }
+]

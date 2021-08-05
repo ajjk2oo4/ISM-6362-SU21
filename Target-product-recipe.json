@@ -1,0 +1,353 @@
+[
+  {
+    "Action": {
+      "Operation": "DELETE",
+      "Parameters": {
+        "sourceColumns": "[\"'ACCESS_DATE'\",\"'UPC'\",\"'DPCI'\",\"'ISBN'\",\"'PRODUCT_DESCRIPTION_BULLETS'\",\"'BRAND_FACET_ID'\",\"'VENDOR_INFO'\",\"'MERCH_CLASS'\",\"'MERCH_CLASSID'\",\"'MERCH_SUBCLASS'\",\"'PRODUCT_CATEGORY_CLASSIFICATION_CODE'\",\"'PRODUCT_TYPE_CODE'\",\"'TAX_CATEGORY_CODE'\",\"'TAX_CATEGORY_ID'\",\"'IS_SUBSCRIPTION_ELIGIBLE'\",\"'STREET_DATE'\",\"'BUY_URL'\",\"'GIFT_WRAPPABLE'\",\"'RETURN_METHOD'\",\"'RETURN_GUESTMESSAGE'\",\"'RETURN_POLICY_DAYS'\",\"'ITEM_STATE'\",\"'IS_RETAIL_TICKETED'\",\"'COUNTRY_OF_ORIGIN'\",\"'IMAGES'\",\"'HAS_PROP65'\",\"'IS_HAZMAT'\",\"'IS_PRODUCT_RECALLED'\",\"'HAS_LEAD_DISCLOSURE'\",\"'IS_HAZARDOUS_MATERIAL'\",\"'ESTORE_ITEM_STATUS_CODE'\",\"'BOX_PERCENTAGE_FILLED_BY_VOLUME'\",\"'BOX_PERCENT_FILLED_BY_WEIGHT'\",\"'BOX_PERCENT_FILLED_DISPLAY'\",\"'IS_PO_BOX_PROHIBITED'\",\"'SHIP_TO_RESTRICTION'\",\"'IS_CART_ADD_ON'\",\"'IS_PROPOSITION_65'\",\"'PACKAGE_DIMENSIONS'\",\"'RATING_RECOMMENDED_COUNT'\",\"'RATING_NOT_RECOMMENDED_COUNT'\",\"'RATING_DISTRIBUTION'\",\"'RATING_REVIEW_TOTAL'\",\"'RATING_ONLY_REVIEW_COUNT'\",\"'RATING_TOTAL_REVIEW_COUNT'\",\"'RATING_HAS_VERIFIED_REVIEWS'\",\"'EXPERT_REVIEW_CONTENT_METADATA'\",\"'RATING_SECONDARY_RATING_FIELDS'\",\"'MOST_RECENT_REVIEWS'\"]"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_COMBINED",
+      "Parameters": {
+        "collapseConsecutiveWhitespace": "false",
+        "removeAllPunctuation": "false",
+        "removeAllQuotes": "false",
+        "removeAllWhitespace": "false",
+        "removeCustomCharacters": "false",
+        "removeCustomValue": "false",
+        "removeLeadingAndTrailingPunctuation": "false",
+        "removeLeadingAndTrailingQuotes": "false",
+        "removeLeadingAndTrailingWhitespace": "false",
+        "removeLetters": "false",
+        "removeNumbers": "false",
+        "removeSpecialCharacters": "true",
+        "sourceColumn": "'TCIN'"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_COMBINED",
+      "Parameters": {
+        "collapseConsecutiveWhitespace": "false",
+        "customCharacters": "/",
+        "customValue": "<B>",
+        "removeAllPunctuation": "false",
+        "removeAllQuotes": "true",
+        "removeAllWhitespace": "false",
+        "removeCustomCharacters": "true",
+        "removeCustomValue": "true",
+        "removeLeadingAndTrailingPunctuation": "false",
+        "removeLeadingAndTrailingQuotes": "false",
+        "removeLeadingAndTrailingWhitespace": "false",
+        "removeLetters": "false",
+        "removeNumbers": "false",
+        "removeSpecialCharacters": "true",
+        "sourceColumn": "'PRODUCT_TITLE'"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_COMBINED",
+      "Parameters": {
+        "collapseConsecutiveWhitespace": "false",
+        "customCharacters": "/",
+        "customValue": "<B>",
+        "removeAllPunctuation": "false",
+        "removeAllQuotes": "true",
+        "removeAllWhitespace": "false",
+        "removeCustomCharacters": "true",
+        "removeCustomValue": "true",
+        "removeLeadingAndTrailingPunctuation": "false",
+        "removeLeadingAndTrailingQuotes": "false",
+        "removeLeadingAndTrailingWhitespace": "false",
+        "removeLetters": "false",
+        "removeNumbers": "false",
+        "removeSpecialCharacters": "false",
+        "sourceColumn": "'PRODUCT_DESCRIPTION'"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_COMBINED",
+      "Parameters": {
+        "collapseConsecutiveWhitespace": "false",
+        "customCharacters": "/",
+        "customValue": "<B>",
+        "removeAllPunctuation": "false",
+        "removeAllQuotes": "true",
+        "removeAllWhitespace": "false",
+        "removeCustomCharacters": "true",
+        "removeCustomValue": "true",
+        "removeLeadingAndTrailingPunctuation": "false",
+        "removeLeadingAndTrailingQuotes": "false",
+        "removeLeadingAndTrailingWhitespace": "false",
+        "removeLetters": "false",
+        "removeNumbers": "false",
+        "removeSpecialCharacters": "false",
+        "sourceColumn": "'BRAND_NAME'"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_COMBINED",
+      "Parameters": {
+        "collapseConsecutiveWhitespace": "false",
+        "customCharacters": "/",
+        "customValue": "<B>",
+        "removeAllPunctuation": "false",
+        "removeAllQuotes": "true",
+        "removeAllWhitespace": "false",
+        "removeCustomCharacters": "true",
+        "removeCustomValue": "true",
+        "removeLeadingAndTrailingPunctuation": "false",
+        "removeLeadingAndTrailingQuotes": "false",
+        "removeLeadingAndTrailingWhitespace": "false",
+        "removeLetters": "false",
+        "removeNumbers": "false",
+        "removeSpecialCharacters": "false",
+        "sourceColumn": "'BRAND_MANUFACTURER'"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_COMBINED",
+      "Parameters": {
+        "collapseConsecutiveWhitespace": "false",
+        "customCharacters": "/",
+        "customValue": "<B>",
+        "removeAllPunctuation": "false",
+        "removeAllQuotes": "true",
+        "removeAllWhitespace": "false",
+        "removeCustomCharacters": "true",
+        "removeCustomValue": "true",
+        "removeLeadingAndTrailingPunctuation": "false",
+        "removeLeadingAndTrailingQuotes": "false",
+        "removeLeadingAndTrailingWhitespace": "false",
+        "removeLetters": "false",
+        "removeNumbers": "false",
+        "removeSpecialCharacters": "false",
+        "sourceColumn": "'PRODUCT_CATEGORY_CLASSIFICATION_NAME'"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_COMBINED",
+      "Parameters": {
+        "collapseConsecutiveWhitespace": "false",
+        "customCharacters": "/",
+        "customValue": "<B>",
+        "removeAllPunctuation": "false",
+        "removeAllQuotes": "true",
+        "removeAllWhitespace": "false",
+        "removeCustomCharacters": "true",
+        "removeCustomValue": "true",
+        "removeLeadingAndTrailingPunctuation": "false",
+        "removeLeadingAndTrailingQuotes": "false",
+        "removeLeadingAndTrailingWhitespace": "false",
+        "removeLetters": "false",
+        "removeNumbers": "false",
+        "removeSpecialCharacters": "false",
+        "sourceColumn": "'ITEM_TYPE_NAME'"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_COMBINED",
+      "Parameters": {
+        "collapseConsecutiveWhitespace": "false",
+        "customCharacters": "/}]",
+        "customValue": "<B>",
+        "removeAllPunctuation": "false",
+        "removeAllQuotes": "true",
+        "removeAllWhitespace": "false",
+        "removeCustomCharacters": "true",
+        "removeCustomValue": "true",
+        "removeLeadingAndTrailingPunctuation": "false",
+        "removeLeadingAndTrailingQuotes": "false",
+        "removeLeadingAndTrailingWhitespace": "false",
+        "removeLetters": "false",
+        "removeNumbers": "false",
+        "removeSpecialCharacters": "false",
+        "sourceColumn": "'PRODUCT_TYPE_NAME'"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_COMBINED",
+      "Parameters": {
+        "collapseConsecutiveWhitespace": "false",
+        "customCharacters": "/[{}]",
+        "customValue": "<B>",
+        "removeAllPunctuation": "false",
+        "removeAllQuotes": "true",
+        "removeAllWhitespace": "false",
+        "removeCustomCharacters": "true",
+        "removeCustomValue": "true",
+        "removeLeadingAndTrailingPunctuation": "false",
+        "removeLeadingAndTrailingQuotes": "false",
+        "removeLeadingAndTrailingWhitespace": "false",
+        "removeLetters": "false",
+        "removeNumbers": "false",
+        "removeSpecialCharacters": "false",
+        "sourceColumn": "'MAX_ORDER_QTY'"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_COMBINED",
+      "Parameters": {
+        "collapseConsecutiveWhitespace": "false",
+        "customCharacters": "/[]{}",
+        "customValue": "<B>",
+        "removeAllPunctuation": "false",
+        "removeAllQuotes": "true",
+        "removeAllWhitespace": "false",
+        "removeCustomCharacters": "true",
+        "removeCustomValue": "true",
+        "removeLeadingAndTrailingPunctuation": "false",
+        "removeLeadingAndTrailingQuotes": "false",
+        "removeLeadingAndTrailingWhitespace": "false",
+        "removeLetters": "false",
+        "removeNumbers": "false",
+        "removeSpecialCharacters": "false",
+        "sourceColumn": "'RATING_AVERAGE_OVERALL'"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "RENAME",
+      "Parameters": {
+        "sourceColumn": "'TCIN'",
+        "targetColumn": "TCIN"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "CHANGE_DATA_TYPE",
+      "Parameters": {
+        "columnDataType": "long",
+        "sourceColumn": "TCIN"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "RENAME",
+      "Parameters": {
+        "sourceColumn": "'PRODUCT_TITLE'",
+        "targetColumn": "PRODUCT_TITLE"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "RENAME",
+      "Parameters": {
+        "sourceColumn": "'PRODUCT_DESCRIPTION'",
+        "targetColumn": "PRODUCT_DESCRIPTION"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "RENAME",
+      "Parameters": {
+        "sourceColumn": "'BRAND_NAME'",
+        "targetColumn": "BRAND_NAME"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "RENAME",
+      "Parameters": {
+        "sourceColumn": "'BRAND_MANUFACTURER'",
+        "targetColumn": "BRAND_MANUFACTURER"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "RENAME",
+      "Parameters": {
+        "sourceColumn": "'PRODUCT_CATEGORY_CLASSIFICATION_NAME'",
+        "targetColumn": "PRODUCT_CATEGORY_CLASSIFICATION_NAME"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "RENAME",
+      "Parameters": {
+        "sourceColumn": "'ITEM_TYPE_NAME'",
+        "targetColumn": "ITEM_TYPE_NAME"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "RENAME",
+      "Parameters": {
+        "sourceColumn": "'PRODUCT_TYPE_NAME'",
+        "targetColumn": "PRODUCT_TYPE_NAME"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "RENAME",
+      "Parameters": {
+        "sourceColumn": "'MAX_ORDER_QTY'",
+        "targetColumn": "MAX_ORDER_QTY"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "CHANGE_DATA_TYPE",
+      "Parameters": {
+        "columnDataType": "short",
+        "sourceColumn": "MAX_ORDER_QTY"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "RENAME",
+      "Parameters": {
+        "sourceColumn": "'RATING_AVERAGE_OVERALL'",
+        "targetColumn": "RATING_AVERAGE_OVERALL"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "CHANGE_DATA_TYPE",
+      "Parameters": {
+        "columnDataType": "decimal",
+        "sourceColumn": "RATING_AVERAGE_OVERALL"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_MISSING",
+      "Parameters": {
+        "sourceColumn": "TCIN"
+      }
+    }
+  }
+]
